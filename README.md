@@ -16,9 +16,9 @@ the user can create his own available dates do the people can reserve a meeting 
 
 #queries 
 ### you can test the queries in localhost useing this link http://127.0.0.1:8000/graphql/
-##users queries
+## users queries
 
-###user register
+### user register
 ```
 mutation {
 	register(email:"test1@test.com",username :"testing",password1:"aa12345678",password2:"aa12345678"){
@@ -30,7 +30,7 @@ mutation {
 }
 ```
 
-###user login
+### user login
 ```
 mutation {
 	tokenAuth(password:"1234",username:"alaa") {
@@ -43,7 +43,7 @@ mutation {
 ```
 
 
-###user create user
+### user create user
 ```
 mutation {
  	createUser(email:"test@test.com",password:"nono1234",username:"testing"){
@@ -55,9 +55,9 @@ mutation {
 ```
 
 
-##appointments queries
-###CRUD Operations
-####Create appointment
+## appointments queries
+### CRUD Operations
+#### Create appointment
 ```
 mutation {
 	createAppointment(date:"2018-06-29 08:15:27.243860",interval:1){
@@ -67,7 +67,7 @@ mutation {
   }
 }
 ```
-####Update appointment
+#### Update appointment
 ```
 mutation {
 	updateAppointment(id:1,date:"2018-06-29 08:15:27.243860",interval:1){
@@ -78,7 +78,7 @@ mutation {
   }
 }
 ```
-####Delete appointment
+#### Delete appointment
 ```
 mutation {
 	deleteAppointment(id:27){
@@ -86,7 +86,7 @@ mutation {
   }
 }
 ```
-####get appointment
+#### get appointment
 ```
 query{
     appointments {
@@ -99,8 +99,8 @@ query{
 
 
 
-##reservation queries
-###create reservation 
+## reservation queries
+### create reservation 
 ```
 mutation {
   createReservation(appointmentId: 28, email: "user@mail.com", username: "user") {
