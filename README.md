@@ -1,4 +1,4 @@
-# scheduling_system
+# Scheduling system
 the user can create his own available dates do the people can reserve a meeting for that user.
 
 
@@ -15,7 +15,7 @@ the user can create his own available dates do the people can reserve a meeting 
 
 
 #queries 
-
+### you can test the queries in localhost useing this link http://127.0.0.1:8000/graphql/
 ##users queries
 
 ###user register
