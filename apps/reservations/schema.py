@@ -18,21 +18,21 @@ class CreateReservation(graphene.Mutation):
     reservation = graphene.Field(ReservationType )
    
     class Arguments:
-        appointment = graphene.Int()
+        appointment_id = graphene.Int()
         username = graphene.String()
         email = graphene.String()
 
 
-    def mutate(self,info,appointment,username,email):
+    def mutate(self,info,appointment_id,username,email):
         newReservation = Reservation(full_name=username,email=email)
 
-        checkReservation = Reservation.objects.filter(appointment=appointment).exists()
+        checkReservation = Reservation.objects.filter(appointment=appointment_id).exists()
 
         if checkReservation:
             raise MyException('Reservation alreay taken')
 
             
-        appo = Appointment.objects.get(id=appointment)
+        appo = Appointment.objects.get(id=appointment_id)
         newReservation.appointment = appo
         newReservation.save()
 
