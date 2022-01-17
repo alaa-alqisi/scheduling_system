@@ -2,7 +2,6 @@ from django.utils import timezone
 from graphene_django import DjangoObjectType
 from apps.users.models import User 
 from apps.appointments.models import Appointment 
-import re
 import graphene
 from datetime import datetime
 class AppointmentType(DjangoObjectType):
